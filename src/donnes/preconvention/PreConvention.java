@@ -17,7 +17,7 @@ public class PreConvention implements Serializable{
     //private static final long serialVersionUID = 1L;
 
     private Long id;
-    //protected boolean statut;
+    protected boolean valide;
     protected DateConvention dateDeb, dateFin;
     protected float gratification;
     protected String stage, resumeSujet, entreprise, tuteur, numEntreprise;
@@ -32,7 +32,7 @@ public class PreConvention implements Serializable{
     }*/
 
     public PreConvention(Long id, DateConvention dateDeb, DateConvention dateFin, float gratification, String stage, String resumeSujet, String entreprise, String tuteur, String numEntreprise, Etudiant etudiant) {
-        //this.statut = statut;
+        this.valide = true;
         this.id = id;
         this.dateDeb = dateDeb;
         this.dateFin = dateFin;
@@ -45,15 +45,13 @@ public class PreConvention implements Serializable{
         this.etudiant = etudiant;
     }
     
-    
-
-    /*public boolean getStatut() {
-        return statut;
+    public boolean estValide() {
+        return valide;
     }
 
-    public void setStatut(boolean statut) {
-        this.statut = statut;
-    }*/
+    public void setValidite(boolean valide) {
+        this.valide = valide;
+    }
 
     public DateConvention getDateDeb() {
         return dateDeb;
@@ -126,33 +124,6 @@ public class PreConvention implements Serializable{
     public void setEtudiant(Etudiant etudiant) {
         this.etudiant = etudiant;
     }
-
-    
-
-    /*@Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof PreConvention)) {
-            return false;
-        }
-        PreConvention other = (PreConvention) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }*/
-
-    /*protected Date dateDeb, dateFin;
-    protected float gratification;
-    protected String stage, resumeSujet, entreprise, tuteur, numEntreprise;
-    protected Etudiant etudiant;*/
     
     @Override
     public String toString() {
