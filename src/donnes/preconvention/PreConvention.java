@@ -31,7 +31,7 @@ public class PreConvention implements Serializable{
         this.id = id;
     }*/
 
-    public PreConvention(Long id, DateConvention dateDeb, DateConvention dateFin, float gratification, String stage, String resumeSujet, String entreprise, String tuteur, String numEntreprise, Etudiant etudiant) {
+    public PreConvention(Long id, DateConvention dateDeb, DateConvention dateFin, float gratification, String stage, String resumeSujet, String entreprise, String numEntreprise, Etudiant etudiant) {
         this.valide = true;
         this.id = id;
         this.dateDeb = dateDeb;
