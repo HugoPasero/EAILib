@@ -11,7 +11,7 @@ import java.util.List;
 public class Diplome implements Serializable{
     //private static final long serialVersionUID = 1L;
 
-    private Long id;
+    private String id;
     
     public enum Niveau{
         L1, L2, L3, M1, M2
@@ -20,13 +20,13 @@ public class Diplome implements Serializable{
     private String intitule;
     private List<Etudiant> etudiants = new ArrayList<>();
 
-    public Diplome(Long id, Niveau niveau, String intitule) {
+    public Diplome(String id, Niveau niveau, String intitule) {
         this.id = id;
         this.niveau = niveau;
         this.intitule = intitule;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
