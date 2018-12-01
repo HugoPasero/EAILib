@@ -134,7 +134,7 @@ public class PreConvention implements Serializable{
                               + "Satge :                  Date de début : " + this.dateDeb.toString()
                                                         + " Date de fin : " + this.dateFin.toString()
                                                         + " Gratification : " + this.gratification + "€"
-                              + "Résumé des activités : " + this.resumeSujet;
+                              + "Résumé des activités : " + this.resumeSujet + "\n statut " + this.valide;
     }
     
 }
