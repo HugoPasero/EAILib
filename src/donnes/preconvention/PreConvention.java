@@ -223,13 +223,14 @@ public class PreConvention implements Serializable{
     @Override
     public String toString() {
         return "PreConvention :\nEtudiant :               Nom :" + this.etudiant.getNom() + " Prénom : " + this.etudiant.getNom() + " Num : " + this.etudiant.getId()
-                              + "Diplome Préparé :        Niveau : " + this.etudiant.getDiplome().getNiveau() + " Intitulé : " + this.etudiant.getDiplome().getIntitule()
-                              + "Responsabilité civile :  Compagnie assurance : " + this.etudiant.getAssurance() + " Num : " + this.etudiant.getContrat()
-                              + "Entreprise/Institution : " + this.entreprise + " Num : " + this.numEntreprise
-                              + "Satge :                  Date de début : " + this.dateDeb.toString()
-                                                        + " Date de fin : " + this.dateFin.toString()
-                                                        + " Gratification : " + this.gratification + "€"
-                              + "Résumé des activités : " + this.resumeSujet + "\n statut " + this.valide;
+                            + "\nDiplome Préparé :        Niveau : " + this.etudiant.getDiplome().getNiveau() + " Intitulé : " + this.etudiant.getDiplome().getIntitule()
+                            + "\nResponsabilité civile :  Compagnie assurance : " + this.etudiant.getAssurance() + " Num : " + this.etudiant.getContrat()
+                            + "\nEntreprise/Institution : " + this.entreprise + " Num : " + this.numEntreprise
+                            + "\nSatge :                  Date de début : " + this.dateDeb.toString()
+                            + "\n                         Date de fin : " + this.dateFin.toString()
+                            + "\n                         Gratification : " + this.gratification + "€"
+                            + "\nRésumé des activités : " + this.resumeSujet 
+                            + "\nValidité : " + this.valide;
     }
     
 }
