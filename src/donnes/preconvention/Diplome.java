@@ -5,12 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Objet diplôme de notre base avec les méthodes utiles à la manipulation du diplôme
  * @author marieroca
  */
 public class Diplome implements Serializable{
-    //private static final long serialVersionUID = 1L;
-
     private String id;
     
     public enum Niveau{
@@ -20,55 +18,62 @@ public class Diplome implements Serializable{
     private String intitule;
     private List<Etudiant> etudiants = new ArrayList<>();
 
+    /**
+     * Construction du diplôme au sein de l'université
+     * @param id Code interne de la formation
+     * @param niveau Niveau du diplome (L1, L2, L3, M1 ou M2)
+     * @param intitule Nom de la formation
+     */
     public Diplome(String id, Niveau niveau, String intitule) {
         this.id = id;
         this.niveau = niveau;
         this.intitule = intitule;
     }
 
+    /**
+     * Getter de l'identifiant du diplôme
+     * @return l'identifiant du diplôme
+     */
     public String getId() {
         return id;
     }
 
-    /*public void setId(Long id) {
-        this.id = id;
-    }*/
-
+    /**
+     * Getter du le niveau du diplôme
+     * @return le niveau du diplôme
+     */
     public Niveau getNiveau() {
         return niveau;
     }
 
+    /**
+     * Setter du le niveau du diplôme
+     * @param niveau le niveau du diplôme
+     */
     public void setNiveau(Niveau niveau) {
         this.niveau = niveau;
     }
 
+    /**
+     * Getter de l'intitule du diplôme
+     * @return l'intitule du diplôme
+     */
     public String getIntitule() {
         return intitule;
     }
 
+    /**
+     * Setter de l'intitule du diplôme
+     * @param intitule l'intitule du diplôme
+     */
     public void setIntitule(String intitule) {
         this.intitule = intitule;
     }
 
-    /*public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Diplome)) {
-            return false;
-        }
-        Diplome other = (Diplome) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }*/
-
+    /**
+     * Chaine de caractère représentant le diplôme
+     * @return chaine de caractère représentant le diplôme
+     */
     public String toString() {
         //return "entities.Diplome[ id=" + id + " ]";
         return "Diplome : " + this.niveau + " " + this.intitule;
